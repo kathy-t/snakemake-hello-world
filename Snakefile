@@ -1,6 +1,8 @@
+cheers = ['Bonjour', 'Ciao', 'Hello', 'Hola']
+
 rule all:
 	input:
-		expand("{cheer}/world.txt", cheer=['Bonjour', 'Ciao', 'Hello', 'Hola']),
+		expand("{cheer}/world.txt", cheer=cheers),
 
 rule hello_world:
 	output:
