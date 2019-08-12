@@ -16,5 +16,5 @@ snakemake
 Look at the output:
 
 ```bash
-less hello/world.txt
+cat */world.txt
 ```
