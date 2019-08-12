@@ -1,11 +1,11 @@
 rule all:
 	input:
-		"hello/world.txt",
+		expand("{cheer}/world.txt", cheer=['Bonjour', 'Ciao', 'Hello', 'Hola']),
 
 rule hello_world:
 	output:
-		"hello/world.txt",
+		"{cheer}/world.txt",
 	shell:
 		"""
-		echo "Hello, World!" > {output}
+		echo "{wildcards.cheer}, World!" > {output}
 		"""
