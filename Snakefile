@@ -1,9 +1,13 @@
-cheers = ['Bonjour', 'Ciao', 'Hello', 'Hola']
-
+# By convention, the first pseudorule should be called "all"
+# We're using the expand() function to create multiple targets
 rule all:
 	input:
-		expand("{cheer}/world.txt", cheer=cheers),
+		expand(
+			"{cheer}/world.txt",
+			cheer = ['Bonjour', 'Ciao', 'Hello', 'Hola'],
+		),
 
+# First real rule, this is using a wildcard called "cheer"
 rule hello_world:
 	output:
 		"{cheer}/world.txt",
