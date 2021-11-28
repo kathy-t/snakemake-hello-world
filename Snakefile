@@ -8,7 +8,7 @@ rule all:
 		),
 
 # First real rule, this is using a wildcard called "cheer"
-rule hello_world:
+rule multilingual_hello:
 	output:
 		"{cheer}/world.txt",
 	shell:
