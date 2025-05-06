@@ -1,3 +1,3 @@
-rule hello_world:
+rule all:
   shell:
     'echo "Hello World!"'
